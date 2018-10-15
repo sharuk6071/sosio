@@ -1,0 +1,19 @@
+
+{% extends "sosio_app/base.html" %}
+{% block content %}
+{% for expense in expenses%}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <h1>Name : {{expense.Name}}</h1>
+      <a class="mr-2" href="#">INCOME : {{expense.monthly_income}}</a>
+      <p>income spent on Shelter : {{expense.monthly_expenses_on_shelter}}</p>
+      <p>income spent on food :  {{expense.monthly_expenses_on_food}}</p>
+      <p>income spent on tavel : {{expense.monthly_expenses_on_travel}}</p>
+      <p>Other expenses : {{expense.other_expenses}}</p>
+    </div>
+  </div>
+</article>
+{% endfor %}
+
+{% endblock content %}

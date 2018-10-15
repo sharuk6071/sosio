@@ -1,0 +1,27 @@
+{% extends "sosio_app/base.html" %}
+{% block content %}
+<h1>log in here</h1>
+<div class="content-section">
+  <form method="EXPENSES">
+    <fieldset  class="form-group">
+      <legend class="boder-bottom mb-4">Join Today</legend>
+      {% csrf_token %}
+      {{ form.as_p }}
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-info" type="Sign_Up" name="button">Sign Up</button>
+      <div class="boder_top pt-3">
+        <small class="text-muted">
+          Already have a acoount? <a class="ml-2" href="{%url 'login'%}"> Sign In</a>
+        </small>
+
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
+
+
+{% endblock content %}
